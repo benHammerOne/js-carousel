@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+    max-width: 600px;
+    position: relative;
+}
+
+.carousel-content {
+    display: inline-block;
+    background-color: #000;
+    z-index: 1;
+}
+
+.carousel-item {
+    display: none;
+    max-height: 300px;
+}
+
+.carousel-item img {
+    width: 100%;
+}
+
+.carousel-item-visible {
+    display: block;
+    animation: fadeVisibility 0.5s;
+}
+
+.carousel-controls {
+    display: none;
+    z-index: 99;
+}
+
+.carousel-actions {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top:  50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.carousel:hover .carousel-controls {
+    display: block;
+}
+
+.carousel-location {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    top: 92%;
+    width: 100%;
+}
+
+.location-item {
+    background: darkgrey;
+    margin: 0 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.location-item.location-item-visible {
+    background: white;
+}
+
+.loading-progress {
+    background-color: #f2f2f2;
+    height: 2px;
+    width: 100%;
+}
+
+#progress-bar {
+    background-color: darkgrey;
+    position: absolute;
+    height: 2px;
+    width: 0%;
+}
+
+button {
+    border: none;
+    border-radius: 50%;
+    background-color: darkcyan;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    max-height: 53px;
+    margin: 0px 15px;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0.2
+    }
+    100% {opacity: 1}
+}
+
+
+/* ADVANCED TASK:  Controls aren't visible when keyframes animation runs => maker smooth transition with working controls;
+=> no solution found */
